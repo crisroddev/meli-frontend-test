@@ -1,6 +1,6 @@
 const express = require("express");
 const axios = require("axios");
-const { mapItem, mapResponse } = require("../utils");
+const { itemMapping, mappingResponse } = require("../utils");
 
 const router = express.Router();
 
@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
     const categories = response.data.filters.find(
       filter => filter.id === "category"
     );
-    res.json(mapResponse(response.data.results, categories));
+    res.json(mappingResponse(response.data.results, categories));
   } catch (error) {
     if (error.response) {
       res
@@ -30,7 +30,7 @@ router.get("/:id", async (req, res) => {
     const description = await axios.get(
       `https://api.mercadolibre.com/items/${req.params.id}/description`
     );
-    const response = mapItem(item.data);
+    const response = itemMapping(item.data);
     response.description = description.data.plain_text;
     res.json(response);
   } catch (error) {

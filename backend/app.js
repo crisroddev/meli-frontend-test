@@ -33,7 +33,7 @@ app.use(logger("dev"));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/api/", items);
-// app.use("/api/categories", categorias);
+app.use("/api/categories", categorias);
 
 app.listen(port, () => {
   console.log(`server listening on localhost:${port}`)
