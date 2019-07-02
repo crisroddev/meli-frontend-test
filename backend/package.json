@@ -4,7 +4,7 @@
   "description": "Backend para la aplicación del test de mercado libre",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node ./bin/www"
   },
   "repository": "https://github.com/crodriguez85/meli-frontend-test.git",
   "author": "Cristian Rodriguez",
