@@ -27,7 +27,6 @@ const mapItem = ({
     picture: thumbnail,
     free_shipping: shipping.free_shipping,
     address: address ? address.state_name : null,
-  // eslint-disable-next-line camelcase
     sold_quantity,
     category_id
   };
