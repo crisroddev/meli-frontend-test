@@ -5,7 +5,7 @@ const logger = require('morgan');
 const port = 8000;
 
 const items = require('./routes/items');
-// const  categorias = require('./routes/categories');
+const  categorias = require('./routes/categories');
 
 const app = express();
 
